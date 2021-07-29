@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#navTitulo{
+  font-size: 30px;
+  color: rgb(29, 158, 29);
+  font-weight: bold;
+}
+
+.navbar{
+  width: 100%;
+  margin-top: -452px;
+}
+
+.nav-item{
+  padding-left: 5rem;
+}
+
+#imgLogo{
+  max-width: 100px;
+}
