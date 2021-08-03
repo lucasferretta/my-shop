@@ -13,20 +13,29 @@ code {
 }
 
 #navTitulo{
-  font-size: 30px;
+  font-size: 32px;
   color: rgb(29, 158, 29);
   font-weight: bold;
 }
 
 .navbar{
   width: 100%;
-  margin-top: -452px;
+  margin-top: -460px;
 }
 
 .nav-item{
-  padding-left: 5rem;
+  padding-left: 2.5rem;
+  margin-top: 8px;
 }
 
 #imgLogo{
   max-width: 100px;
 }
+
+#carritoImg{
+  max-width: 80px;
+  margin-left: 0px;
+  
+}
+
+

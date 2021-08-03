@@ -1,7 +1,13 @@
 import React from 'react'
+import CartWidget from './CartWidget'
+
+//import CartWidget from './components/CartWidget';
 
 const navBar = () => {
     return (
+
+        
+        
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 
@@ -29,14 +35,24 @@ const navBar = () => {
                                 </li>
                                 
                             </ul>
-                            <form className="d-flex">
+                            <form className="d-flex nav-item">
                                 <input size="30" className="form-control me-2" type="search" placeholder="Medicamentos y productos" aria-label="Search"></input>
                                     <button className="btn btn-outline-success" type="submit"> buscar</button>
                             </form>
                         </div>
                 </div>
+                <div><CartWidget /></div>
         </nav>
+
     )
+    
 }
 
+
+        
+
+
 export default navBar
+
+
+
