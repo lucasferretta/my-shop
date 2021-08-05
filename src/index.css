@@ -5,11 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    
 }
 
 #navTitulo{
@@ -20,7 +22,7 @@ code {
 
 .navbar{
   width: 100%;
-  margin-top: -460px;
+  margin-top: -10px;
 }
 
 .nav-item{
@@ -37,5 +39,35 @@ code {
   margin-left: 0px;
   
 }
+
+.card{
+  width: 13rem;
+  margin: 50px 15px 15px 15px;
+
+  
+ 
+    
+}
+
+.contenedorCards{
+  display: flex;
+
+  
+}
+
+h5, p{
+  color: black;
+  
+}
+
+#contador{
+  display: inline;
+  margin-left: 20px ;
+  margin-right: 20px ;
+}
+
+
+
+
 
 
