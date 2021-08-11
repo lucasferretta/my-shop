@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 
 
-export default function ItemCount({stock, initial, producto,imgProd,descripcion}){
+export default function ItemCount({stock, producto,imgProd,descripcion}){
+    const initial = 0;
     const [count, setCount] = useState (parseInt(initial));
     const stockBase = stock||0;
     const nombreProducto = producto;
     const imgProducto = imgProd;
     const infoProducto = descripcion;
+    
 
     const validarSumar = (cantidad=0, cantidadDisponible=0) => {
         if (cantidad < cantidadDisponible){
