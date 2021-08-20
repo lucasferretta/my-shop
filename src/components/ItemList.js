@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Item from './Item';
 
+
 export default function ItemList() {
 
         const [products, setProducts] = useState([])
@@ -39,6 +40,7 @@ export default function ItemList() {
                 {products.map((cadaProducto) => (
                     <Item {...cadaProducto} />
                 ))}
+                
             </div>
         )
     }

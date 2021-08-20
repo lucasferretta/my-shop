@@ -55,7 +55,7 @@ code {
   
 }
 
-h5, p{
+h3, h5, p{
   color: black;
   
 }
@@ -64,6 +64,10 @@ h5, p{
   display: inline;
   margin-left: 20px ;
   margin-right: 20px ;
+}
+
+.imgSize{
+  max-width: 130px;
 }
 
 
