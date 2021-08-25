@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 
 
 
+
 export default function ItemCount({stock}){
     const initial = 0;
     const [count, setCount] = useState (parseInt(initial));
     const stockBase = stock||0;
+
    
     
 
@@ -30,12 +32,12 @@ export default function ItemCount({stock}){
 
     return(
         <>
-            <div className="card">
+            <div >
 
                 
-                    <div className="card-body">
+                    <div>
                         
-                        <p className="card-text">Stock: {stockBase}</p>
+                        <p>Stock: {stockBase}</p>
                         <button className="btn btn-danger" onClick={() => validarRestar(count)}>-</button>
                         <p id="contador">{count}</p>
                         <button className="btn btn-success" onClick={() => validarSumar(count,stockBase)}>+</button>

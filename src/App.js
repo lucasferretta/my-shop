@@ -1,8 +1,8 @@
 import './App.css';
 import NavBar from "./components/NavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {BrowserRouter, Switch, Route} from "react-router-dom"
 import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer';
 
 
@@ -13,11 +13,34 @@ function App() {
       <div className="App">
       <header className="App-header">
         
+        <BrowserRouter>
+        <Switch>
+
+        <Route exact path="/">
         <NavBar />
-        <ItemDetailContainer />
-        <ItemCount />
-        <ItemListContainer />
+        <ItemListContainer />      
+        </Route>
+
+        <Route exact path="/category/:categoryId">
+        <NavBar />
+              
+        </Route>
         
+        
+        
+          
+            <Route exact path="/menu-item">
+            <NavBar />
+              
+            </Route>
+
+            <Route exact path="/item/:id">
+            <NavBar />
+              <ItemDetailContainer />
+            </Route>
+          
+          </Switch>
+        </BrowserRouter>
       
        
         

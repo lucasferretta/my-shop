@@ -49,13 +49,9 @@ code {
     
 }
 
-.contenedorCards{
-  display: flex;
 
-  
-}
 
-h3, h5, p{
+h3, h4, p{
   color: black;
   
 }

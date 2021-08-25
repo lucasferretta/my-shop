@@ -1,9 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 import CartWidget from './CartWidget'
+
 
 //import CartWidget from './components/CartWidget';
 
 const navBar = () => {
+
+    
     return (
 
         
@@ -11,17 +15,18 @@ const navBar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 
-                <a id="navTitulo" className="navbar-brand" href="#">Farma Store</a>
+            <Link exact to={`/`} id="navTitulo" className="navbar-brand">Farma Store   </Link>
+                
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                          <span className="navbar-toggler-icon"></span>
                     </button>
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Perfumería</a>
+                                <Link to={`/category/:categoryId`}><a className="nav-link">Perfumería</a></Link>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Farmacia </a>
+                                <Link to={`/category/:categoryId`}><a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Farmacia </a></Link>
                                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li><a className="dropdown-item" href="#">Particular</a></li>
                                             <li><a className="dropdown-item" href="#">Obra social</a></li>
