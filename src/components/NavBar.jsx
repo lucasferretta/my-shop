@@ -23,10 +23,10 @@ const navBar = () => {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                <Link to={`/category/:categoryId`}><a className="nav-link">Perfumería</a></Link>
+                                <Link to={`/category/perfumeria`}><a className="nav-link">Perfumería</a></Link>
                                 </li>
                                 <li className="nav-item dropdown">
-                                <Link to={`/category/:categoryId`}><a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Farmacia </a></Link>
+                                <Link to={`/category/farmacia`}><a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Farmacia </a></Link>
                                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li><a className="dropdown-item" href="#">Particular</a></li>
                                             <li><a className="dropdown-item" href="#">Obra social</a></li>

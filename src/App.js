@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter, Switch, Route} from "react-router-dom"
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Farmacia from './components/farmacia';
+import Perfumeria from './components/perfumeria';
 
 
 
@@ -21,9 +23,15 @@ function App() {
         <ItemListContainer />      
         </Route>
 
-        <Route exact path="/category/:categoryId">
+        <Route exact path="/category/farmacia">
         <NavBar />
-              
+        <Farmacia />
+
+        </Route>
+
+        <Route exact path="/category/perfumeria">
+        <NavBar />
+        <Perfumeria />
         </Route>
         
         
