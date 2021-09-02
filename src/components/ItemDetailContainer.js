@@ -8,9 +8,8 @@ import {productos} from './productsJson';
 
 export default function ItemDetailContainer() {
             
-
-        const [detail, setDetail] = useState([])
-
+    const [detail, setDetail] = useState([])
+        
         const {id} = useParams();
 
         useEffect (() => {
@@ -28,7 +27,7 @@ export default function ItemDetailContainer() {
             
         }, [])
 
-        return <ItemDetail {...detail}/>
+        return <ItemDetail detail={detail} />
                
         
         

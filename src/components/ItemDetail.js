@@ -1,31 +1,29 @@
-import React from 'react'
-import {Link} from 'react-router-dom';
 import ItemCount from './ItemCount';
 
-export default function ItemDetail(props) {
-    return(
-        <div>
-            
-            <div className="card">
+function ItemDetail({detail}) {
+    const {stock,name, accion, precio, imagen} = detail
+    
+    return (
+
+    <div className="card">
 
                 
-                    <div className="card-body">
-                    <img className= 'imgSize' src={props.imagen} className="card-img-top" alt="imagen" />
-                    <h4 className="card-title">{props.name}</h4>
-                    <h3 className="card-title">{props.precio}</h3>
-                    <p className="card-text">{props.accion}</p>
-                    <Link to={`/`}> -Info </Link>
-                        
-                    
-                        <ItemCount stock={props.stock} />
-                        
-                       
-                        
-                    </div>
-            </div>
+        <div className="card-body">
+      
+                <img className="imgSize" alt="imagen" src={imagen}/>
+          
+                
+          <h3 className="card-title">{name}</h3>
+                <p className="card-text">{accion}</p>
+                <h4>Stock: {stock}</h4>
+                <p className="card-text">{precio}</p>
+          </div>
+          
+            <ItemCount stock={stock} initial={1}/>
             
-        </div>
-    )
+          </div>
+      
+    );
+}
 
-        
-    }
+export default ItemDetail;

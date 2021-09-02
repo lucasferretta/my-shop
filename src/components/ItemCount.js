@@ -1,69 +1,48 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Redirect } from "react-router-dom";
 
 
+function ItemCount({stock, initial}) {
+
+    const [cantidad, setCantidad] = useState(initial);
+    const [confirmacion, setConfirmacion] = useState(false);
 
 
-export default function ItemCount({stock}){
-    const initial = 0;
-    const [count, setCount] = useState (parseInt(initial));
-    const stockBase = (stock||0);
-    const nuevoStockBase = stockBase-count || stockBase;
-
-    
-
-   
-    
-
-    const validarSumar = (cantidad=0, cantidadDisponible=0) => {
-        if (cantidad < cantidadDisponible){
-            setCount(count+1)
-        }
+    const Incrementar = () => {
+        if(cantidad < stock && stock > 0) {
+            setCantidad(cantidad + 1);
+        };
     };
 
-    const validarRestar = (cantidad=0) => {
-        if (cantidad > 0){
-        setCount(count-1);
-        }
-    }
+    const Decrementar = () => {
+        if(cantidad > 1) {
+            setCantidad(cantidad - 1);
+        };
+    };
 
     const onAdd = () => {
-        if(stock >= count){
-            console.log(`Item agregado x ${count} unidades`)
-            
+      if (stock >= cantidad) {
+        console.log(`Se ha agregado al carrito ${cantidad} productos`)
+        setConfirmacion(true)
+      }else{
+        console.log(`No hay stock disponible`)
+      }
+    }
+
+
+    return (
+      <div>
+        <div id="contador">
+          <button onClick={Decrementar} className="btn btn-danger">-</button>
+          <input name="cantidad" value={cantidad} />
+          <button onClick={Incrementar} className="btn btn-success">+</button>
+        </div>
+        <button onClick={onAdd} className="btn btn-primary">Agregar al Carrito</button>
+        {
+          confirmacion && <Redirect to="/Cart" />
         }
-        else{
-            console.log(`Sin stock`)
+      </div>
+    );
+  }
 
-        }
-
-        
-    };
-
-   
-
-    useEffect(()=> {
-   
-        
-    }, [])
-
-    return(
-        <>
-            <div >
-
-                
-                    <div>
-                        
-                        <p>Stock: {nuevoStockBase}</p>
-                        <button className="btn btn-danger" onClick={() => validarRestar(count)}>-</button>
-                        <p id="contador">{count}</p>
-                        <button className="btn btn-success" onClick={() => validarSumar(count,stockBase)}>+</button>
-                        <br />
-                        <br />
-                        <button onClick={onAdd} className="btn btn-primary">Agregar al carrito</button>
-                    </div>
-            </div>
-        </>
-    )
-
-    
-}
+export default ItemCount;

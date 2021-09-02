@@ -6,6 +6,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Farmacia from './components/farmacia';
 import Perfumeria from './components/perfumeria';
+import Cart from './components/Cart'
 
 
 
@@ -33,6 +34,11 @@ function App() {
         <NavBar />
         <Perfumeria />
         </Route>
+
+        <Route exact path="/Cart">
+        <NavBar />
+          <Cart />
+        </Route>
         
         
         
@@ -48,6 +54,7 @@ function App() {
             </Route>
           
           </Switch>
+          
         </BrowserRouter>
       
        
