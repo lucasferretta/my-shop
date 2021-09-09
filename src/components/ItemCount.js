@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Redirect } from "react-router-dom";
 
 
-function ItemCount({stock, initial}) {
+function ItemCount({stock, initial, action}) {
 
     const [cantidad, setCantidad] = useState(initial);
     const [confirmacion, setConfirmacion] = useState(false);
@@ -20,14 +20,14 @@ function ItemCount({stock, initial}) {
         };
     };
 
-    const onAdd = () => {
+    /*const onAdd = () => {
       if (stock >= cantidad) {
         console.log(`Se ha agregado al carrito ${cantidad} productos`)
         setConfirmacion(true)
       }else{
         console.log(`No hay stock disponible`)
       }
-    }
+    }*/
 
 
     return (
@@ -37,7 +37,7 @@ function ItemCount({stock, initial}) {
           <input name="cantidad" value={cantidad} />
           <button onClick={Incrementar} className="btn btn-success">+</button>
         </div>
-        <button onClick={onAdd} className="btn btn-primary">Agregar al Carrito</button>
+        <button onClick={()=>{action(cantidad)}} className="btn btn-primary">Agregar al Carrito</button>
         {
           confirmacion && <Redirect to="/Cart" />
         }

@@ -7,16 +7,26 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Farmacia from './components/farmacia';
 import Perfumeria from './components/perfumeria';
 import Cart from './components/Cart'
+import {CartContext} from './context/CartContext';
+import { useState } from 'react';
 
 
 
 function App() {
+  
+  const [data, setData] = useState({
+    items: [],
+    cantidad: 0
+  })
+
   return (
      
       <div className="App">
       <header className="App-header">
         
+        <CartContext.Provider value = {[data, setData]}>
         <BrowserRouter>
+        
         <Switch>
 
         <Route exact path="/">
@@ -55,8 +65,9 @@ function App() {
           
           </Switch>
           
+          
         </BrowserRouter>
-      
+      </CartContext.Provider>
        
         
               

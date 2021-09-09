@@ -17,16 +17,24 @@ export default function ItemDetailContainer() {
 
                 
                 setTimeout(() => resolve (productos.filter(item => item.grupo === "Perfumeria")),2000)
+                
             
             }).then((dataResolve) => setPerfu(dataResolve)
             
+            
             )
+            
             .catch((error) => {
                 console.log('err', error)
             })
             
+            
         }, [])
 
-        return <Item {...perfu}/>
+        return (
+            <div>
+                
 
-    }
+            </div>
+
+        )}
