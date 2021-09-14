@@ -20,14 +20,7 @@ function ItemCount({stock, initial, action}) {
         };
     };
 
-    /*const onAdd = () => {
-      if (stock >= cantidad) {
-        console.log(`Se ha agregado al carrito ${cantidad} productos`)
-        setConfirmacion(true)
-      }else{
-        console.log(`No hay stock disponible`)
-      }
-    }*/
+    
 
 
     return (

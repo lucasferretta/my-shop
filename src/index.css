@@ -22,7 +22,7 @@ code {
 
 .navbar{
   width: 100%;
-  margin-top: 00px;
+  
 }
 
 .nav-item{
@@ -37,6 +37,7 @@ code {
 #carritoImg{
   max-width: 80px;
   margin-left: 0px;
+  
   
 }
 
@@ -73,7 +74,19 @@ h3, h4, p{
   max-width: 130px;
 }
 
-
+.carritoNumero{
+  border-radius: 100px;
+  border-color: rgb(29, 158, 29);
+  border-style: solid;
+  margin-bottom: -35px;
+  margin-left: 45px;
+  margin-right: 5px;
+  background: rgb(29, 158, 29);
+  font-size: 20px;
+  
+  
+  
+}
 
 
 

@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom';
-import CartWidget from './CartWidget'
+import CartWidgetFuncional from './CartWidgetFuncional'
 
 
-//import CartWidget from './components/CartWidget';
+function NavBar() {
 
-const navBar = () => {
+    const [showWidget, setShowWidget] = useState(false)
+    
+    const openWidget = () => {
+        setShowWidget(!showWidget);
+    }
+
+    
 
     
     return (
@@ -46,7 +52,9 @@ const navBar = () => {
                             </form>
                         </div>
                 </div>
-                <div><CartWidget /></div>
+                <div >
+                <Link to={`/cart`}><div ><CartWidgetFuncional show={showWidget} accion={openWidget}/></div></Link>
+                </div>
         </nav>
 
     )
@@ -57,7 +65,7 @@ const navBar = () => {
         
 
 
-export default navBar
+export default NavBar
 
 
 
